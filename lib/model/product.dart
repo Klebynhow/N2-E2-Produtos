@@ -12,6 +12,6 @@ class Product {
     required this.description,
     required this.price,
     required this.quantity,
-    required this.icon
+    required this.icon,
   });
 }
