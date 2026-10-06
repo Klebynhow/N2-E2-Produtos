@@ -1,6 +1,6 @@
 # catalogo_produtos
 
-A new Flutter project.
+N2-E2 da disciplina de Desenvolvimento de Dispositivos Móveis
 
 ## Getting Started
 
