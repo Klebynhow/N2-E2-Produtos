@@ -1,17 +1,11 @@
 # catalogo_produtos
 
+                 Vinicius Batista 
 N2-E2 da disciplina de Desenvolvimento de Dispositivos Móveis
 
-## Getting Started
+## Iniciando
 
-This project is a starting point for a Flutter application.
+Clone o aplicativo na sua máquina e rode o comando
+`flutter pub get` através do terminal ou CMD.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Abra o emulador de dispositivo móvel e execute o app.
