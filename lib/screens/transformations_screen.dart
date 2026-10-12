@@ -25,6 +25,7 @@ class _TransformationsScreenState extends State<TransformationsScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
+          
           BuildCard(title: 'Transformação de Números', child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,6 +38,78 @@ class _TransformationsScreenState extends State<TransformationsScreen> {
             )
           ),
           const SizedBox(height: 16,),
+
+          BuildCard(title: 'Palavras em Widgets', child: Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: words.map((word) {
+            return Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFF6FF),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: const Color(0xFF93C5FD)),
+              ),
+              child: Text(
+                word,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1E40AF),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const SizedBox(height: 16,),
+
+          BuildCard(title: "Nomes em Botões", child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: names.map((name) {
+                  return ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: (){
+                      setState(() {
+                      buttonMessage = 'Você cutucou $name';
+                    });
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Botão Selecionado: $name'),
+                        duration: const Duration(seconds: 1),
+                        ),
+                      );
+                    },  
+                    child: Text(name));
+                }).toList(),
+              ),
+              const SizedBox(height: 12,),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF8FAFC), 
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: const Color(0xFFCBD5E1)),
+                ),
+                child: Text(
+                  buttonMessage,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontStyle: FontStyle.italic,
+                    color: Color(0xFF334155),
+                  ),
+                ),
+              ),
+            ],
+            ),
+          ),
         ],
       ),
     );
