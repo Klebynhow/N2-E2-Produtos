@@ -40,7 +40,6 @@ class _MyAppState() extends State<MyApp> with WidgetsBindingObserver{
       title: "Catalogo de Produtos",
       debugShowCheckedModeBanner: false,
       theme: ThemeData( 
-        //muda essa porra de temas aq depois
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF0F172A),
           primary: const Color(0xFF0F172A),
